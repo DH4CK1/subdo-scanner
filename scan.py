@@ -28,11 +28,11 @@ print(logo)
 print('{}Team{}: {}Black Coder Crush {}& {}DevSecID\n').format(cy,me,pu,bi,pu)
 host = input.ask('Host')
 if 'www' in host:
-    host = host.replace('www.')
+    host = host.replace('www.','')
 elif 'http://' in host:
-    host = host.replace('http://')
+    host = host.replace('http://','')
 elif 'https://' in host:
-    host = host.replace('https://')
+    host = host.replace('https://','')
 
 r = requests.get('https://api.hackertarget.com/hostsearch/?q='+host).text
 if 'error check your search parameter' in r:
