@@ -25,7 +25,7 @@ cy = c('cyan')
 pu = c('white')
 os.system('clear')
 print(logo)
-print('{}Team{}: {}Black Coder Crush {}& {}DevSecID\n').format(cy,me,pu,bi,pu)
+print('{}Team{}: {}Black Coder Crush\n').format(cy,me,pu)
 host = input.ask('Host')
 if 'www' in host:
     host = host.replace('www.','')
