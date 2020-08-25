@@ -1,7 +1,7 @@
 #!/bin/python2.7
 #-*- coding: utf-8 -*-
 """
-Copyright (c) 2020 Dst_207
+Copyright (c) 2020 DH4CK1
 """
 
 """
@@ -13,7 +13,7 @@ kak kalo mau pelajari pelajari aja ok!
 import os, time, sys, json, re, requests
 from var_animate import *
 
-logo = banner('Subdomain','Dst_207','0.1 Scanner')
+logo = banner('Subdomain','DH4CK1','0.1 Scanner')
 alert = animvar()
 input = animinput()
 ## Coloring ##
@@ -23,16 +23,12 @@ bi = c('blue')
 i = c('green')
 cy = c('cyan')
 pu = c('white')
+
 os.system('clear')
 print(logo)
+
 print('{}Team{}: {}Black Coder Crush\n').format(cy,me,pu)
-host = input.ask('Host')
-if 'www' in host:
-    host = host.replace('www.','')
-elif 'http://' in host:
-    host = host.replace('http://','')
-elif 'https://' in host:
-    host = host.replace('https://','')
+host = input.ask('Host').replace('www.','').replace('https://','').replace('http://','')
 
 r = requests.get('https://api.hackertarget.com/hostsearch/?q='+host).text
 if 'error check your search parameter' in r:
